@@ -11,7 +11,7 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function(l1, l2) {
-    let kkkl3 = new ListNode(0)
+    let l3 = new ListNode(0)
     let p1 = l1, p2 = l2, p3 = l3, carray = 0
     while(p1 || p2) {
         const v1 = p1 ? p1.val : 0
