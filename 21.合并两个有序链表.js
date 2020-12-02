@@ -9,6 +9,8 @@
  * @param {ListNode} l1
  * @param {ListNode} l2
  * @return {ListNode}
+ * 时间复杂度O(n+m)
+ * 空间复杂度O(1)
  */
 var mergeTwoLists = function(l1, l2) {
     if(!l1 || !l2) {
