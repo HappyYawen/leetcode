@@ -3,6 +3,7 @@
  * @param {number} n
  * @return {number}
  * 时间复杂度O(log(n)以2为底)
+ * 也可使用递归思路
  */
 var myPow = function(x, n) {
     if(n === 0) {
