@@ -36,3 +36,16 @@ var validateStackSequences = function(pushed, popped) {
     }
     return  s.length === 0
 };
+var validateStackSequences2 = function(pushed, popped) {
+    let s = [], i = 0
+    let cur = popped.shift()
+    while(i < pushed.length) {
+        s.push(pushed[i])
+        while(s.length && s[s.length-1] === cur){
+            s.pop()
+            cur = popped.shift()
+        } 
+        i++
+    }
+    return  s.length === 0
+};
