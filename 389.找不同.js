@@ -82,11 +82,12 @@ var findTheDifference = function(s, t) {
     //思路2
     let sum = 0
     for(let c of t) {
-        sum += c.charCodeAt()
+        sum += c.charCodeAt() //字符转化为ascii码
     }
     for(let c of s) {
         sum -= c.charCodeAt()
     }
+    //String.fromCharCode将数值转化为对应的字符
     return sum > 0 ? String.fromCharCode(sum) : ''
 };
 // @lc code=end
