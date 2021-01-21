@@ -7,12 +7,13 @@
  */
 //双边循环法
 function quickSort(arr, startIndex, endIndex) {
-    if(startIndex > endIndex) {
+    if(startIndex >= endIndex) {
         return;
     }
     //基准元素的索引
     let pivotIndex =  partition(arr, startIndex, endIndex) //分治
     quickSort(arr, startIndex, pivotIndex - 1)
+    quickSort(arr, pivotIndex + 1,endIndex)
 }
 /**
  * 找到基准元素，同时对
@@ -46,4 +47,6 @@ function partition(arr, startIndex, endIndex) {
 
     return left;
 }
-console.log(quickSort([3,4,2,1,5,6]))
+let array = [3,4,2,1,5,6]
+quickSort(array, 0, array.length - 1)
+console.log(array)
